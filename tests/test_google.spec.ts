@@ -14,6 +14,4 @@ test('Search Cqlsys mohali on Google', async ({ page }) => {
   // Add a small assertion to make sure navigation occurred, or just wait for results
   await expect(page).toHaveURL(/search/);
 
-  // Give some time to see the result
-  await page.waitForTimeout(5000);
 });
