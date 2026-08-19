@@ -6,7 +6,7 @@ test('Search Cqlsys mohali on Google', async ({ page }) => {
 
   // 2) Search Cqlsys mohali in the search box
   // Locate the search box (usually named 'q') and fill it
-  //await page.locator('textarea[name="q"], input[name="q"]').fill('Google Office');
+  await page.locator('textarea[name="q"], input[name="q"]').fill('Cqlsys mohali');
 
   // 3) Press enter
   await page.keyboard.press('Enter');

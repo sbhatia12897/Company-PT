@@ -1,4 +1,10 @@
 import { defineConfig, devices } from '@playwright/test';
+import { defineBddConfig } from 'playwright-bdd';
+
+const testDir = defineBddConfig({
+  features: 'tests/features/*.feature',
+  steps: 'tests/steps/*.ts',
+});
 
 /**
  * Read environment variables from file.
@@ -12,7 +18,7 @@ import { defineConfig, devices } from '@playwright/test';
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
-  testDir: './tests',
+  testDir,
   outputDir: './report/videos',
   /* Run tests in files in parallel */
   fullyParallel: true,
