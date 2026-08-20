@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Run Tests') {
             steps {
-                sh 'npx playwright test'
+                sh 'TEST_DIR=./tests npx playwright test'
             }
         }
     }
