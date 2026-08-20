@@ -17,4 +17,7 @@ test('Search Cqlsys mohali on Google', async ({ page }) => {
   // 4) Open youtube.com
   await page.goto('https://www.youtube.com');
 
+  // 5) Open gmail.com
+  await page.goto('https://www.gmail.com');
+
 });
